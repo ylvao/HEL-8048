@@ -1,0 +1,11 @@
+name: hel8048
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - kagglehub=0.3
+      - matplotlib=3.10
+      - numpy=2.2
