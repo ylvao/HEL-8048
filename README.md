@@ -40,7 +40,7 @@ Install the dependencies
 
 
 
-## Required packages
+## Required Python Packages
 
 To run this project, you will need to add the following python packages
 
