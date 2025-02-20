@@ -5,6 +5,15 @@ This project is the exam work for the course HEL-8048 (Advanced data analysis an
 
 The projects looks at how the weight of different Pokémon has changes through the generations
 
+## File overwiew
+
+This repository contains several files, all of which are explained bellow.
+
+`environment.yml` Environment file containing all necessary dependencies
+`exam.ipynb` Executable jupyter notebook file containing the exam work
+`exam.html` HTML version of the jupyter notebook containing the exam
+`pokemon.csv` Collection of the Pokémon data used in the exam, [retrived from kaggle](https://www.kaggle.com/datasets/rounakbanik/pokemon?resource=download)
+
 
 ## Run Locally
 
