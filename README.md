@@ -32,13 +32,17 @@ Go to the project directory
   cd HEL-8048
 ```
 
-Install the dependencies
+Install conda environment with the required python packages
 
 ```bash
-  npm install
+  conda env create -f environment.yml
 ```
 
+Activate conda 
 
+```bash
+  conda activate hel8048
+```
 
 ## Required Python Packages
 
@@ -49,6 +53,8 @@ To run this project, you will need to add the following python packages
 `matplotlib` (Version 3.10)
 
 `kagglehub` (Optional, version 0.3)
+
+`ipywidgets` (Version 8.1)
 
 
 
