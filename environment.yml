@@ -1,4 +1,4 @@
-name: hel8048test
+name: hel8048
 channels:
   - conda-forge
   - defaults
