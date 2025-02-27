@@ -9,7 +9,7 @@ The projects looks at how the weight of different Pokémon has changes through t
 
 This repository contains several files, all of which are explained bellow.
 
-`environment.yml` Environment file containing all necessary dependencies
+`env.yml` Environment file containing all necessary dependencies
 
 `exam.ipynb` Executable jupyter notebook file containing the exam work
 
@@ -35,7 +35,7 @@ Go to the project directory
 Install conda environment with the required python packages
 
 ```bash
-  conda env create -f environment.yml
+  conda env create -f env.yml
 ```
 
 Activate conda 
