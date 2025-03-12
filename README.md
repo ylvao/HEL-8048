@@ -3,7 +3,7 @@
 
 This project is the exam work for the course HEL-8048 (Advanced data analysis and visualization using programming) during the spring of 2025. 
 
-The projects looks at how the weight of different Pokémon has changes through the generations.
+The project mainly looks at how the weight of different Pokémon has changes through the generations.
 
 ## File overwiew
 
@@ -17,10 +17,13 @@ This repository contains several files, all of which are explained bellow.
 
 `pokemon.csv` Collection of the Pokémon data used in the exam, [retrived from kaggle](https://www.kaggle.com/datasets/rounakbanik/pokemon?resource=download)
 
+`LICENCE` Includes the terms and conditions of the GNU General Public Licence
 
 ## Run Locally
 
-The project can be installed via git to be ran locally using the following command
+The project can be installed via git to be ran locally using the following the instructions bellow.
+
+Clone the project using the command
 
 ```bash
   git clone https://github.com/ylvao/HEL-8048
