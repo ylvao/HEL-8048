@@ -56,7 +56,9 @@ To run this project, you will need to add the following python packages
 
 `ipywidgets` (Version 8.1)
 
+`seaborn` (Version 0.13)
 
+`pandas` (Version 2.2)
 
 
 ## Authors
