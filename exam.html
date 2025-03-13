@@ -7655,48 +7655,167 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Crate function to emove top and right axis for visualization purposes</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">remove_top_right_axis</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">'''</span>
+<span class="sd">    Removes the top and right spines (borders) from the current plot.</span>
+
+<span class="sd">    This function modifies the current active axis (`plt.gca()`) by hiding</span>
+<span class="sd">    the top and right spines, making the plot visually cleaner.</span>
+
+<span class="sd">    Usage:</span>
+<span class="sd">    Call this function after creating a plot to remove unnecessary borders.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">    &gt;&gt;&gt; import matplotlib.pyplot as plt</span>
+<span class="sd">    &gt;&gt;&gt; plt.plot([1, 2, 3], [4, 5, 6])</span>
+<span class="sd">    &gt;&gt;&gt; remove_top_right_axis()</span>
+<span class="sd">    &gt;&gt;&gt; plt.show()</span>
+<span class="sd">    '''</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">'top'</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">'right'</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
     
 <span class="c1"># Function to compute mean</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">find_mean</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">'''</span>
+<span class="sd">    Calculates the mean (average) of a given list of numbers.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): A list of numerical values.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    float: The mean of the list if it is not empty.</span>
+<span class="sd">    int: Returns 0 if the list is empty.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">    &gt;&gt;&gt; find_mean([1, 2, 3, 4, 5])</span>
+<span class="sd">    3.0</span>
+<span class="sd">    &gt;&gt;&gt; find_mean([])</span>
+<span class="sd">    0</span>
+<span class="sd">    '''</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span> <span class="c1"># Intruduce a return zero to deal with errors that occurred further on</span>
+        <span class="k">return</span> <span class="mi">0</span>
 
 <span class="c1"># Function to compute standard deviation</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">find_stdev</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">'''</span>
+<span class="sd">    Calculates the standard deviation of a given list of numbers.</span>
+
+<span class="sd">    Standard deviation measures the dispersion of data points relative </span>
+<span class="sd">    to the mean.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): A list of numerical values.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    float: The standard deviation of the list if it is not empty.</span>
+<span class="sd">    int: Returns 0 if the list is empty.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">    &gt;&gt;&gt; find_stdev([1, 2, 3, 4, 5])</span>
+<span class="sd">    1.4142135623730951</span>
+<span class="sd">    &gt;&gt;&gt; find_stdev([])</span>
+<span class="sd">    0</span>
+<span class="sd">    '''</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">mean</span> <span class="o">=</span> <span class="n">find_mean</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
         <span class="n">variance</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">mean</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variance</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span> <span class="c1"># Intruduce a return zero to deal with errors that occurred further on</span>
+        <span class="k">return</span> <span class="mi">0</span> 
 
 <span class="c1"># Calculate the median value depending on wheather the list is odd or even</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">find_median</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="o">%</span><span class="k">2</span> == 1:
-        <span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># The original list is not sorted making the implemented method not find the correct median</span>
-        <span class="n">median</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span>
-    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="o">%</span><span class="k">2</span> == 0:
-        <span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-        <span class="n">median</span> <span class="o">=</span> <span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)]</span> <span class="o">+</span> <span class="n">lst</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span> <span class="c1"># If there is no singular median, the avergave of the two median values are used</span>
-    <span class="k">return</span> <span class="n">median</span>
+<span class="w">    </span><span class="sd">'''</span>
+<span class="sd">    Calculates the median of a given list of numbers.</span>
+
+<span class="sd">    The median is the middle value of a sorted list. If the list has an odd number </span>
+<span class="sd">    of elements, the middle element is returned. If the list has an even number </span>
+<span class="sd">    of elements, the average of the two middle elements is returned.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    lst (list): A list of numerical values.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    float: The median value of the list.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">    &gt;&gt;&gt; find_median([3, 1, 2])</span>
+<span class="sd">    2</span>
+<span class="sd">    &gt;&gt;&gt; find_median([4, 1, 3, 2])</span>
+<span class="sd">    2.5</span>
+<span class="sd">    '''</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>  <span class="c1"># Edge case: empty list</span>
+
+    <span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>  <span class="c1"># Ensure the list is sorted before finding the median</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>  <span class="c1"># Middle index</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># Odd number of elements</span>
+        <span class="k">return</span> <span class="n">lst</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># Even number of elements</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">+</span> <span class="n">lst</span><span class="p">[</span><span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
 
 
 <span class="c1"># Function to filter Pokémon that are 400 kg or more</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">filter_heavy_pokemon</span><span class="p">(</span><span class="n">gen_weights</span><span class="p">,</span> <span class="n">max_weight</span><span class="o">=</span><span class="mi">400</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">'''</span>
+<span class="sd">    Filters Pokémon by weight, keeping only those that meet or exceed the given weight threshold.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    gen_weights (dict): A dictionary where keys are Pokémon generations (e.g., 'Gen 1', 'Gen 2')</span>
+<span class="sd">                        and values are lists of Pokémon weights in that generation.</span>
+<span class="sd">    max_weight (int, optional): The minimum weight (in any unit) a Pokémon must have </span>
+<span class="sd">                                 to be included in the filtered result. Default is 400.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    dict: A dictionary containing only Pokémon that meet or exceed the weight threshold, </span>
+<span class="sd">          with the same generational structure as the input.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">    &gt;&gt;&gt; gen_weights = {</span>
+<span class="sd">    ...     "Gen 1": [200, 500, 350, 800],</span>
+<span class="sd">    ...     "Gen 2": [100, 450, 600, 300]</span>
+<span class="sd">    ... }</span>
+<span class="sd">    &gt;&gt;&gt; filter_heavy_pokemon(gen_weights, max_weight=400)</span>
+<span class="sd">    {'Gen 1': [500, 800], 'Gen 2': [450, 600]}</span>
+<span class="sd">    '''</span>
     <span class="k">return</span> <span class="p">{</span><span class="n">gen</span><span class="p">:</span> <span class="p">[</span><span class="n">weight</span> <span class="k">for</span> <span class="n">weight</span> <span class="ow">in</span> <span class="n">weights</span> <span class="k">if</span> <span class="n">weight</span> <span class="o">&gt;=</span> <span class="n">max_weight</span><span class="p">]</span> <span class="k">for</span> <span class="n">gen</span><span class="p">,</span> <span class="n">weights</span> <span class="ow">in</span> <span class="n">gen_weights</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
 
 <span class="c1"># Function to create subplots with the correct customization</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">create_pie</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">nr</span><span class="p">,</span> <span class="n">axes</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">'''</span>
+<span class="sd">    Creates a pie chart on a specified subplot axis.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    values (dict): A dictionary where keys represent categories, and values represent </span>
+<span class="sd">                   numerical data to be visualized in the pie chart.</span>
+<span class="sd">    title (str): The title of the pie chart.</span>
+<span class="sd">    nr (int): The index of the subplot in the axes array where the pie chart should be drawn.</span>
+<span class="sd">    axes (array-like): An array of subplot axes (e.g., created using `plt.subplots()`).</span>
+<span class="sd">    labels (list): A list of category labels for the pie chart.</span>
+<span class="sd">    colors (list): A list of colors corresponding to each category in the pie chart.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    None: The function modifies the given `axes` by adding a pie chart.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">    &gt;&gt;&gt; import matplotlib.pyplot as plt</span>
+<span class="sd">    &gt;&gt;&gt; fig, axes = plt.subplots(1, 2)  # Create two subplots</span>
+<span class="sd">    &gt;&gt;&gt; values = {'A': 30, 'B': 50, 'C': 20}</span>
+<span class="sd">    &gt;&gt;&gt; labels = list(values.keys())</span>
+<span class="sd">    &gt;&gt;&gt; colors = ['red', 'blue', 'green']</span>
+<span class="sd">    &gt;&gt;&gt; create_pie(values, "Example Pie Chart", 0, axes, labels, colors)</span>
+<span class="sd">    &gt;&gt;&gt; plt.show()</span>
+<span class="sd">    '''</span>
     <span class="n">axes</span><span class="p">[</span><span class="n">nr</span><span class="p">]</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">values</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">'</span><span class="si">%1.1f%%</span><span class="s1">'</span><span class="p">,</span> <span class="n">textprops</span><span class="o">=</span><span class="p">{</span><span class="s1">'fontsize'</span><span class="p">:</span> <span class="mi">12</span><span class="p">},</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">140</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
     <span class="n">axes</span><span class="p">[</span><span class="n">nr</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
 </pre></div>
