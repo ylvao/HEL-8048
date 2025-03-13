@@ -28,25 +28,25 @@ The project can be installed via git to be ran locally using the following the i
 Clone the project using the command
 
 ```bash
-  git clone https://github.com/ylvao/HEL-8048
+git clone https://github.com/ylvao/HEL-8048
 ```
 
 Go to the project directory
 
 ```bash
-  cd HEL-8048
+cd HEL-8048
 ```
 
 Install conda environment with the required python packages
 
 ```bash
-  conda env create -f env.yml
+conda env create -f env.yml
 ```
 
 Activate conda 
 
 ```bash
-  conda activate hel8048
+conda activate hel8048
 ```
 
 ## Required Python Packages
