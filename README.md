@@ -19,6 +19,8 @@ This repository contains several files, all of which are explained bellow.
 
 `LICENCE` Includes the terms and conditions of the GNU General Public Licence
 
+`decicions.pdf` PDF report that justifies the use of figure styles, reporting, and analysis.
+
 ## Run Locally
 
 The project can be installed via git to be ran locally using the following the instructions bellow.
