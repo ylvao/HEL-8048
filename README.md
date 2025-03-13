@@ -44,6 +44,9 @@ conda env create -f env.yml
 ```
 
 Activate conda 
+```bash
+conda init hel8048
+```
 
 ```bash
 conda activate hel8048
