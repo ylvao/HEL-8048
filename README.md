@@ -43,11 +43,13 @@ Install conda environment with the required python packages
 conda env create -f env.yml
 ```
 
-Activate conda environment
+Add conda environment to bashrc
 
 ```bash
-conda init hel8048
+conda init
 ```
+
+Activate conda environment
 
 ```bash
 conda activate hel8048
@@ -67,7 +69,7 @@ To run this project, you will need to add the following python packages
 
 `seaborn` (Version 0.13)
 
-`pandas` (Version 2.2)
+`pandas` (Version 2.2.3)
 
 
 ## Authors
