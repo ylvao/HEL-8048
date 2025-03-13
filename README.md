@@ -3,7 +3,7 @@
 
 This project is the exam work for the course HEL-8048 (Advanced data analysis and visualization using programming) during the spring of 2025. 
 
-The project mainly looks at how the weight of different Pokémon has changes through the generations.
+The project mainly looks at how the weight of different Pokémon has changes through the generations, and exploring the hypothesis that Pokémon follow the same trend as humans; getting thicker over the past decades.
 
 ## File overwiew
 
