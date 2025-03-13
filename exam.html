@@ -7592,7 +7592,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Makes a list of all different types of Pokémon</span>
@@ -7621,7 +7621,6 @@ a.anchor-link {
         <span class="k">if</span> <span class="nb">type</span> <span class="ow">in</span> <span class="n">type_weights</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">'weight_kg'</span><span class="p">]:</span>
             <span class="n">type_weights</span><span class="p">[</span><span class="nb">type</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'weight_kg'</span><span class="p">]))</span>
             
-<span class="nb">print</span><span class="p">(</span><span class="n">gen_weights</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8287,7 +8286,8 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Based on this correlation map, it is a slight positive correlation between the generations and the weight (~0.09), suggesting that the later generations are in fact slightly heavier. We can also see that steel and ground type Pokémons are seems to be the heavier types, which makes sense concidering the previous scatter plot. A lot of fun inmormation can be found here.</p>
+<p>The correlation matrix is based on the covariance between different variables, where 1 indicates a highly positive correlation and -1 indicates a highly negative correlation. Based on this figure, it is a slight positive correlation between the generations and the weight (~0.09), suggesting that the later generations are in fact slightly heavier. We can also see that steel and ground type Pokémons seems to be the heavier types, which makes sense concidering the previous scatter plot. And unsurprisingly, grass and bug types are the lightest.</p>
+<p>A lot of fun information can be found here, for example, there is a quite large negative correlation between a Pokémon being both a grass and normal type, suggesting that usually if the Pokémon is a grass type it is rarely also a normal type. However, there is overall little correlation between the different types of Pokémon.</p>
 </div>
 </div>
 </div>
