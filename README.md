@@ -43,7 +43,8 @@ Install conda environment with the required python packages
 conda env create -f env.yml
 ```
 
-Activate conda 
+Activate conda environment
+
 ```bash
 conda init hel8048
 ```
