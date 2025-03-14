@@ -1,7 +1,7 @@
 
 # Weight Development in Pokémon
 
-This project is the exam work for the course HEL-8048 (Advanced data analysis and visualization using programming) during the spring of 2025. 
+This project is the exam work for the course HEL-8048 (Advanced data analysis and visualization using programming) during the spring of 2025.
 
 The project mainly looks at how the weight of different Pokémon has changes through the generations, and exploring the hypothesis that Pokémon follow the same trend as humans; getting thicker over the past decades.
 
@@ -43,7 +43,7 @@ Install conda environment with the required python packages
 conda env create -f env.yml
 ```
 
-Add conda environment to bashrc
+You may need to add the conda environment to bashrc
 
 ```bash
 conda init
@@ -54,6 +54,8 @@ Activate conda environment
 ```bash
 conda activate hel8048
 ```
+
+You can now open `exam.ipynb` in your jupyter notebook editor of choice and run all cells.
 
 ## Required Python Packages
 
@@ -71,8 +73,17 @@ To run this project, you will need to add the following python packages
 
 `pandas` (Version 2.2.3)
 
-
 ## Authors
 
 - [@ylvao](https://www.github.com/ylvao)
 
+## How to cite
+
+```bash
+@misc{
+    title = {Weight Development in Pokémon}
+    authour = {Ylva Os}
+    year = {2025}
+    url = {https://github.com/ylvao/HEL-8048}
+}
+```
