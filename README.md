@@ -79,7 +79,7 @@ To run this project, you will need to add the following python packages
 
 ## How to cite
 
-```bash
+```tex
 @misc{
     title = {Weight Development in Pokémon}
     authour = {Ylva Os}
