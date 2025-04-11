@@ -15,11 +15,11 @@ This repository contains several files, all of which are explained bellow.
 
 `exam.html` HTML version of the jupyter notebook containing the exam
 
-`pokemon.csv` Collection of the Pokémon data used in the exam, [retrived from kaggle](https://www.kaggle.com/datasets/rounakbanik/pokemon?resource=download)
+`pokemon.csv` Collection of the Pokémon data used in the exam, [retrieved from kaggle](https://www.kaggle.com/datasets/rounakbanik/pokemon?resource=download)
 
-`LICENCE` Includes the terms and conditions of the GNU General Public Licence
+`LICENSE` Includes the terms and conditions of the GNU General Public License
 
-`decicions.pdf` PDF report that justifies the use of figure styles, reporting, and analysis.
+`decisions.pdf` PDF report that justifies the use of figure styles, reporting, and analysis.
 
 ## Run Locally
 
