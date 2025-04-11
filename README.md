@@ -3,7 +3,7 @@
 
 This project is the exam work for the course HEL-8048 (Advanced data analysis and visualization using programming) during the spring of 2025.
 
-The project mainly looks at how the weight of different Pokémon has changes through the generations, and exploring the hypothesis that Pokémon follow the same trend as humans; getting thicker over the past decades.
+The project mainly looks at how the weight of different Pokémon has changes through the generations, and exploring the hypothesis that Pokémon follow the same trend as humans; getting thicker over the past decades. The [dataset](https://www.kaggle.com/datasets/rounakbanik/pokemon?resource=download) used is distributed by Rounakbanik on kaggle under the CC0 license.
 
 ## File overview
 
@@ -13,7 +13,9 @@ This repository contains several files, all of which are explained bellow.
 
 `exam.ipynb` Executable jupyter notebook file containing the exam work
 
-`exam.html` HTML version of the jupyter notebook containing the exam
+`exam.html` HTML version of the jupyter notebook containing the exam work
+
+`exam.pdf` PDF version of the jupyter notebook containing the exam work
 
 `pokemon.csv` Collection of the Pokémon data used in the exam, [retrieved from kaggle](https://www.kaggle.com/datasets/rounakbanik/pokemon?resource=download)
 
@@ -76,6 +78,11 @@ To run this project, you will need to add the following python packages
 ## Authors
 
 - [@ylvao](https://www.github.com/ylvao)
+
+
+## How to contribute
+
+All contributions are appreciated! Whether it’s fixing a bug, improving the docs, or suggesting a new feature. This can be done by forking the project and opening a pull request.
 
 ## How to cite
 
